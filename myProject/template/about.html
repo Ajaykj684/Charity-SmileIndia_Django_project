@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block content %}
+{% load static %}
+    
+    <!-- about section start -->
+    <div class="about_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-8">
+               <h2 class="about_taital">about Charity</h2>
+               <p class="about_text">Every child, no matter who they are or where they come from, deserves access to education.
+                  Save the Children, through several state-level programmes and national policy-influencing decisions, has helped educate 4,06,200 children! We address the learning crisis by preparing children and adolescents for life, work, and active citizenship.
+  
+  
+               </p>
+               <div class="readmore_bt"><a href="#"  style="border-radius:10px ;">Read more</a></div>
+            </div>
+            <div class="col-sm-4">
+               <div class="about_img"><img src="{% static 'images/child1.jpg' %}"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+      <!-- about section end -->
+     
+
+      {% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+
+{% block content %}
+{% load static %}
+
+
+
+      <!-- donate section start -->
+      <div class="donate_section layout_padding">
+         <div class="container">
+            <h1 class="donate_taital">people Says </h1>
+            <div class="donate_taital_main">
+               <div id="main_slider" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="donate_left">
+                           <div class="client_img"><img src="{% static 'images/apj.jpg' %}"></div>
+                        </div>
+                        <div class="donate_right">
+                           <h3 class="client_name_text">A.P.J. Abdul Kalam</h3>
+                           <p class="dummy_text">“some poor child living in an obscure place, in an underprivileged social setting, may find a little solace in the way my destiny has been shaped. It could perhaps help such children liberate themselves from the bondage of their illusory backwardness and hopelessness.”
+                          </p>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="donate_left">
+                           <div class="client_img"><img src="{% static 'images/mother.jpeg' %}"></div>
+                        </div>
+                        <div class="donate_right">
+                           <h3 class="client_name_text">MOTHER TERESA</h3>
+                           <p class="dummy_text">“It is easy to love the people far away. It is not always easy to love those close to us. It is easier to give a cup of rice to relieve hunger than to relieve the loneliness and pain of someone unloved in our own home. Bring love into your home for this is where our love for each other must start.”</p>
+                        </div>
+                     </div>
+                    
+                  </div>
+                  <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                  <i class="fa fa-angle-right"></i>
+                  </a>
+                  <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                  <i class="fa fa-angle-left"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- donate section end -->
+    
+
+ 
+
+      {% endblock %}

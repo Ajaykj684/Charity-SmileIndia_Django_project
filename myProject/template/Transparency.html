@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+{% block content %}
+{% load static %}
+    
+    <!-- about section start -->
+    <div class="about_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-8">
+               <h2 class="about_taital">about transparency</h2>
+               <p class="about_text">We define accountability and transparency in assessing charities as follows: Accountability is an obligation or willingness by a charity to explain its actions to its stakeholders. Transparency is an obligation or willingness by a charity to publish and make available critical data about the organization.
+               </p>
+             
+            </div>
+            <table class="table table-bordered" style="color:white;">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Amount recieved</th>
+                    <th scope="col">Place</th>
+                    <th scope="col">Category</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for x in donation %}
+                  <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{x.amount}}</td>
+                    <td>{{x.place}}</td>
+                    <td>{{x.Category}}</td>
+                  </tr>
+                  {% endfor %}
+                 
+                </tbody>
+              </table>
+         </div>
+      </div>
+   </div>
+      <!-- about section end -->
+     
+
+      {% endblock %}

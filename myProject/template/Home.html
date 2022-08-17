@@ -1,0 +1,376 @@
+{% extends 'index.html' %}
+
+{% block content %}
+{% load static %}
+ 
+ <!-- banner section start -->
+ <div class="banner_section layout_padding"  style="margin-top:70px;">
+    <div class="container">
+       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner">
+             <div class="carousel-item active">
+                <div class="row">
+                   <div class="col-sm-12">
+                      <h1 class="banner_taital">Help Poor Child</h1>
+                      <p class="banner_text">“Remember that the happiest people are not those getting more, but those giving more."</p>
+                      <div class="read_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                   </div>
+                </div>
+             </div>
+             <div class="carousel-item">
+                <div class="col-sm-12">
+                   <h1 class="banner_taital">Spread Love</h1>
+                   <p class="banner_text">“Too often we underestimate the power of a touch, a smile, a kind word, a listening ear, an honest compliment, or the smallest act of caring, all of which have the potential to turn a life around. </p>
+                   <div class="read_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                </div>
+             </div>
+             <div class="carousel-item">
+                <div class="col-sm-12">
+                   <h1 class="banner_taital">Give a Helping Hand</h1>
+                   <p class="banner_text">Charity brings to life again those who are spiritually dead.</p>
+                   <div class="read_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                </div>
+             </div>
+             <div class="carousel-item">
+                <div class="col-sm-12">
+                   <h1 class="banner_taital">Spread Happiness</h1>
+                   <p class="banner_text">“History will judge us by the difference we make in the everyday lives of children.” </p>
+                   <div class="read_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                </div>
+             </div>
+             <div class="carousel-item">
+                <div class="col-sm-12">
+                   <h1 class="banner_taital">Make Them Smile</h1>
+                   <p class="banner_text">“If we nurture the dreams of children, the world will be blessed. If we destroy them, the world is doomed!” </p>
+                   <div class="read_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="donation_box" style=" background: transparent;">
+       <h4 class="donation_taital" style="color:white;"><b>Contact For Donation</b></h4>
+       <form action="{% url 'contactform' %}" method="POST">
+         {% csrf_token %}
+       <div class="mail_box">
+          <input style="border-radius: 10px " required type="text" class="mail_text" placeholder="Your Name" name="Name">
+          <input style="border-radius: 10px " required type="email" class="mail_text" placeholder="Email" name="Email">
+          <input style="border-radius: 10px " required type="tel" class="mail_text" placeholder="Phone" name="Phone">
+       </div>
+       <div class="send_bt" ><button class="btn" type="submit" style="border-radius:10px ; background: rgb(16, 28, 138); color: white;">Send</button></div>
+      </form>
+    </div>
+    <div class="fundraise_section">
+       <div class="fundraise_section_main">
+          <div class="row">
+             <div class="col-lg-4">
+                <div class="box_main">
+                   <div class="icon_1"><img src="{% static 'images/icon-1.png' %}"></div>
+                   <h4 class="volunteer_text">VOLUNTEERS</h4>
+                   <p class="lorem_text">“Volunteers do not necessarily have the time; they just have the heart.” </p>
+                   <div class="join_bt"><a href="#">Join Now</a></div>
+                </div>
+             </div>
+             <div class="col-lg-4">
+                <div class="box_main active">
+                   <div class="icon_1"><img src="{% static 'images/icon-2.png' %}"></div>
+                   <h4 class="volunteer_text">FUNDRAISE</h4>
+                   <p class="lorem_text">It's not the amount that matters but the meaning behind your donation.</p>
+                   <div class="join_bt"><a href="#"  style="border-radius:10px ;">Join Now</a></div>
+                </div>
+             </div>
+             <div class="col-lg-4">
+                <div class="box_main">
+                   <div class="icon_1"><img src="{% static 'images/icon-3.png' %}"></div>
+                   <h4 class="volunteer_text">DONATION</h4>
+                   <p class="lorem_text">Always give without remembering and always receive without forgetting.</p>
+                   <div class="join_bt"><a href="#"  style="border-radius:10px ;">Join Now</a></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ </div>
+ <!-- banner section end -->
+ <!-- about section start -->
+ <div class="about_section layout_padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-sm-8">
+             <h2 class="about_taital">about Charity</h2>
+             <p class="about_text">Every child, no matter who they are or where they come from, deserves access to education.
+                Save the Children, through several state-level programmes and national policy-influencing decisions, has helped educate 4,06,200 children! We address the learning crisis by preparing children and adolescents for life, work, and active citizenship.
+
+
+             </p>
+             <div class="readmore_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read more</a></div>
+          </div>
+          <div class="col-sm-4">
+             <div class="about_img"><img src="{% static 'images/child1.jpg' %}"></div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- about section end -->
+ <!-- mission section start -->
+ <div class="mission_section layout_padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-sm-12">
+             <h1 class="mission_taital">Mission causes</h1>
+             <p class="mission_text">Over the years, we have faced a multitude of issues but undeterred,
+                we have devised several solutions that help us continue sharing the gift of education with underprivileged children. </p>
+          </div>
+       </div>
+    </div>
+    <div class="mission_section_2">
+       <div class="row">
+          <div class="offset-md-2"></div>
+          <div class="col-md-5">
+             <div class="container_main">
+                <img src="{% static 'images/child4.jpg' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                   <div class="text">
+                      <h4 class="some_text">whichalteration in some </h4>
+                      <p class="alteration_text">Alteration in some form, by injected humour, or randomised words whichalteration in some form, by injected humour, or randomised words which</p>
+                      <div class="btn_main">
+                         <div class="donate_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                         <div class="donate_bt"><a href="{% url 'donate' %}"  style="border-radius:10px ;">Donate Now</a></div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-5">
+             <div class="container_main">
+                <img src="{% static 'images/img-2.png' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                   <div class="text">
+                      <h4 class="some_text">whichalteration in some </h4>
+                      <p class="alteration_text">Alteration in some form, by injected humour, or randomised words whichalteration in some form, by injected humour, or randomised words which</p>
+                      <div class="btn_main">
+                         <div class="donate_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                         <div class="donate_bt"><a href="{% url 'donate' %}"  style="border-radius:10px ;">Donate Now</a></div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="mission_section_2">
+       <div class="row">
+          <div class="col-md-5">
+             <div class="container_main">
+                <img src="{% static 'images/img-3.png' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                   <div class="text">
+                      <h4 class="some_text">whichalteration in some </h4>
+                      <p class="alteration_text">Alteration in some form, by injected humour, or randomised words whichalteration in some form, by injected humour, or randomised words which</p>
+                      <div class="btn_main">
+                         <div class="donate_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                         <div class="donate_bt"><a href="{% url 'donate' %}"  style="border-radius:10px ;">Donate Now</a></div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-5">
+             <div class="container_main">
+                <img src="{% static 'images/child10.jpg' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                   <div class="text">
+                      <h4 class="some_text">whichalteration in some </h4>
+                      <p class="alteration_text">Alteration in some form, by injected humour, or randomised words whichalteration in some form, by injected humour, or randomised words which</p>
+                      <div class="btn_main">
+                         <div class="donate_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                         <div class="donate_bt"><a href="{% url 'donate' %}"  style="border-radius:10px ;">Donate Now</a></div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="offset-md-2"></div>
+       </div>
+    </div>
+    <div class="mission_section_2">
+       <div class="row">
+          <div class="offset-md-2"></div>
+          <div class="col-md-5">
+             <div class="container_main">
+                <img src="{% static 'images/img-5.png' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                   <div class="text">
+                      <h4 class="some_text">whichalteration in some </h4>
+                      <p class="alteration_text">Alteration in some form, by injected humour, or randomised words whichalteration in some form, by injected humour, or randomised words which</p>
+                      <div class="btn_main">
+                         <div class="donate_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                         <div class="donate_bt"><a href="{% url 'donate' %}"  style="border-radius:10px ;">Donate Now</a></div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-5">
+             <div class="container_main">
+                <img src="{% static 'images/child6.jpg' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                   <div class="text">
+                      <h4 class="some_text">whichalteration in some </h4>
+                      <p class="alteration_text">Alteration in some form, by injected humour, or randomised words whichalteration in some form, by injected humour, or randomised words which</p>
+                      <div class="btn_main">
+                         <div class="donate_bt"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                         <div class="donate_bt"><a href="{% url 'donate' %}"  style="border-radius:10px ;">Donate Now</a></div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- mission section end -->
+ <!-- news section start -->
+ <div class="news_section layout_padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-sm-12">
+             <h1 class="news_taital">FEATURED CAUSE</h1>
+             <p class="news_text">With your help and support, we will be able to educate every last child of our nation!
+
+                Your contribution has the power to change the course of a child’s life. </p>
+          </div>
+       </div>
+       <div class="news_section_2">
+          <div class="row">
+             <div class="col-md-6">
+                <div class="news_img"><img src="{% static 'images/child3.jpg' %}"></div>
+             </div>
+             <div class="col-md-6">
+                <h1 class="give_taital">GIVE EDUCATION</h1>
+                <p class="ipsum_text">We help educate and empower the marginalized children of India, ensuring their enrollment and retention in school through our holistic approach.<br>
+                    We provide crucial healthcare support to children, which include newborn babies, infants, young children, and adolescents.<br>
+                    We work to tackle child poverty and promote social inclusion.
+                </p>
+                <h5 class="raised_text">Raised: $60,010     <span class="goal_text">Goal: $70,000</span></h5>
+                <div class="donate_btn_main">
+                   <div class="readmore_btn"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                   <div class="readmore_btn_1"><a href="{% url 'donate' %}"  style="border-radius:10px ;">Donate Now</a></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- news section end -->
+ <!-- events section start -->
+ <div class="events_section layout_padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-sm-12">
+             <h1 class="news_taital">FEATURED CAUSE</h1>
+             <p class="news_text">We have successfully launched programmes that will ensure welfare for underprivileged children, nationwide.
+                Browse through our aim and approach in each of these programmes.</p>
+          </div>
+       </div>
+       <div class="events_section_2">
+          <div class="row">
+             <div class="col-md-5">
+                <div class="img_7"><img src="{% static 'images/child11.jpg' %}" class="img_7"></div>
+                <div class="date_bt">
+                   <div class="date_text active"><a href="{% url 'Readmore' %}">01</a></div>
+                   <div class="date_text"><a href="#">FEB</a></div>
+                </div>
+             </div>
+             <div class="col-md-7">
+                <h1 class="give_taital_1">HEALTH AND NUTRITION</h1>
+                <p class="ipsum_text_1">We provide crucial healthcare support to children, which include newborn babies, infants, young children, and adolescents.
+                    We work to tackle child poverty and promote social inclusion.</p>
+                <h5 class="raised_text_1">Raised: $60,010 <span class="goal_text">Goal: $70,000</span></h5>
+                <div class="donate_btn_main">
+                   <div class="readmore_btn"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;">Read More</a></div>
+                   <div class="readmore_btn_1"><a href="{% url 'donate' %}"  style="border-radius:10px ;">Donate Now</a></div>
+                </div>
+                <p class="ipsum_text_1">“Poverty is relatively cheap to address and incredibly expensive to ignore.
+                  We provide crucial healthcare support to children, which include newborn babies, infants, young children, and adolescents.
+                  We work to tackle child poverty and promote social inclusion.Poverty is not only about income poverty, it is about the deprivation of economic and social rights, insecurity, discrimination, exclusion 
+                  and powerlessness. That is why human rights must not be ignored but given even greater prominence in times of economic crisis.” </p>
+             </div>
+          </div>
+       </div>
+       <div class="events_section_2">
+          <div class="row">
+             <div class="col-md-5">
+                <div class="img_7"><img src="{% static 'images/child13.jpg' %}" class="img_7 mt-4"></div>
+                <div class="date_bt">
+                   <div class="date_text active"><a href="#">10</a></div>
+                   <div class="date_text"><a href="#">FEB</a></div>
+                </div>
+             </div>
+             <div class="col-md-7">
+                <h1 class="give_taital_1">Basic Necessities</h1>
+                <p class="ipsum_text_1">Foundation is providing poor children by providing them free education, as well as free clothes.
+
+                  Additional funds are very much needed to further this scheme of development of children. So I pray to all the donors with folded hands that all of you do this virtuous work.
+                  
+                  Make this scheme successful by collaborating in it and become a partner in the development of children, because children are the future of the country.</p>
+                <h5 class="raised_text_1">Raised: $60,010     <span class="goal_text">Goal: $70,000</span></h5>
+                <div class="donate_btn_main">
+                   <div class="readmore_btn"><a href="{% url 'Readmore' %}"  style="border-radius:10px ;" >Read More</a></div>
+                   <div class="readmore_btn_1"><a href="{% url 'donate' %}"  style="border-radius:10px ;">Donate Now</a></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- events section end -->
+ <!-- donate section start -->
+ <div class="donate_section layout_padding">
+    <div class="container">
+       <h1 class="donate_taital">Donated people Says </h1>
+       <div class="donate_taital_main">
+          <div id="main_slider" class="carousel slide" data-ride="carousel">
+             <div class="carousel-inner">
+                <div class="carousel-item active">
+                   <div class="donate_left">
+                      <div class="client_img"><img src="{% static 'images/apj.jpg' %}"></div>
+                   </div>
+                   <div class="donate_right">
+                      <h3 class="client_name_text">A.P.J. Abdul Kalam</h3>
+                      <p class="dummy_text">“some poor child living in an obscure place, in an underprivileged social setting, may find a little solace in the way my destiny has been shaped. It could perhaps help such children liberate themselves from the bondage of their illusory backwardness and hopelessness.”
+                     </p>
+                   </div>
+                </div>
+                <div class="carousel-item">
+                   <div class="donate_left">
+                      <div class="client_img"><img src="{% static 'images/mother.jpeg' %}"></div>
+                   </div>
+                   <div class="donate_right">
+                      <h3 class="client_name_text">MOTHER TERESA</h3>
+                      <p class="dummy_text">“It is easy to love the people far away. It is not always easy to love those close to us. It is easier to give a cup of rice to relieve hunger than to relieve the loneliness and pain of someone unloved in our own home. Bring love into your home for this is where our love for each other must start.”</p>
+                   </div>
+                </div>
+               
+             </div>
+             <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+             <i class="fa fa-angle-right"></i>
+             </a>
+             <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+             <i class="fa fa-angle-left"></i>
+             </a>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- donate section end -->
+
+ {% endblock %}
