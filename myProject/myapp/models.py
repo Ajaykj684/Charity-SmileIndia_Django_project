@@ -39,3 +39,9 @@ class Donation(models.Model):
     payment_method = models.CharField(max_length=100, choices=mode)
     Category = models.CharField(max_length=100, choices=category)
     place = models.CharField(max_length=100) 
+
+
+
+class Message(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    message = models.TextField()

@@ -15,10 +15,19 @@ urlpatterns = [
      path('login',views.Login,name='login'),
      path('logout',views.Logout,name='logout'),
      path('contactform',views.contactform,name='contactform'),
+     path('paymentproceed',views.Paymentproceed,name='paymentproceed'),
+
      path('payment',views.Payment,name='payment'),
      path('payment_successfull',views.Payment_successfull,name='payment_successfull'),
      path('Readmore',views.Readmore,name='Readmore'),
      path('transparency',views.Transparency,name='transparency'),
+     path('reviews',views.Reviews,name='reviews'),
+     path('comment',views.Comment,name='comment'),
+     path('viewComments',views.viewComments,name='viewComments'),
+
+
+
+
 
 
 

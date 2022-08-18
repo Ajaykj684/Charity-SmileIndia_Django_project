@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<!-- Main Body -->
+<section>
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-sm-5 col-md-6 col-12 pb-4">
+                <div style="display: flex ; justify-content: space-between;">
+               <div> <h1 style="color:grey;">Comments</h1></div>
+                
+                   <div> <a href="{% url 'viewComments' %}" type="submit" id="post" class="btn forms-group">View all</a></div>
+            </div>
+                {% for msg in message %}
+                <div class="comment mt-4 text-justify float-left col-md-12">
+                    <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
+                    <h4> {{msg.user.first_name}}</h4>
+                    <span>- 20 October, 2018</span>
+                    <br>
+                    <p>{{msg.message}}</p>
+                </div>
+             
+         {% endfor %}
+            </div>
+          
+
+
+            {% if user.id is not none %}
+           
+            <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4" >
+                <form id="algin-form" action="{% url 'comment' %}" method="POST">
+                   {% csrf_token %}
+                    <div class="forms-group" style="background: rgb(255, 255, 255);">
+                        <h4>Leave a comment</h4>
+                        <label for="message">Message</label>
+                        <textarea name="msg" id=""msg cols="30" rows="5" class="form-control" style="background-color: rgb(0, 0, 0); color: white;"></textarea>
+                    </div>
+                   
+                    <div class="forms-group">
+                        <button type="submit" id="post" class="btn">Post Comment</button>
+                    </div>
+                </form>
+            </div>
+           
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

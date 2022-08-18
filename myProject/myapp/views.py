@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib import messages 
 from django.contrib import messages,auth
-from .models import DonateContact,Contact,Donation
+from .models import DonateContact,Contact,Donation,Message
 from django.http import HttpResponse,JsonResponse
 from datetime import datetime
 import datetime
@@ -98,6 +98,12 @@ def contactform(request):
         return redirect('home')
 
 
+def Paymentproceed(request):
+    if request.method == "POST":
+        category =  request.POST['category']
+        
+
+
 
 def Payment(request):
     if request.method == "POST":
@@ -128,3 +134,22 @@ def Transparency(request):
     donation = Donation.objects.all().order_by()[:5]
 
     return render(request,'Transparency.html',{ "donation" : donation })
+
+
+def Reviews(request):
+    message = Message.objects.all().order_by('-id')[:5]
+    return render(request,'reviews.html',{"message": message})
+    
+
+def Comment(request):
+    if request.method == "POST":
+        msg =  request.POST['msg']
+        Message.objects.create(user=request.user , message=msg)
+    return redirect('reviews')
+    
+
+
+def viewComments(request):
+    message = Message.objects.all()
+    return render(request,'reviews.html',{"message": message})
+    
