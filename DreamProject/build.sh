@@ -4,5 +4,8 @@ set -o errexit
 
 poetry install
 
+venv/bin/activate
+
 python manage.py collectstatic --no-input
+
 python manage.py migrate
